@@ -1,0 +1,326 @@
+$curlyFontStack: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI",
+Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$cursiveFontStack: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol", "Noto Color Emoji";
+
+$clearFontStack: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol", "Noto Color Emoji";
+
+$brandYellow: #fed136;
+$brandBlue: #212529;
+
+@mixin logo {
+    color: $brandYellow;
+    font-family: $curlyFontStack
+}
+
+@mixin nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: $clearFontStack;
+    color: white;
+    padding: 0.75em 0;
+}
+
+@mixin section-img-bg {
+    background-image: url("../media/ma-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@mixin section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: $cursiveFontStack;
+}
+
+@mixin form {
+    .form-control:focus {
+        border-color: $brandYellow;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+
+        input, textarea {
+            padding: 20px;
+        }
+
+        input.form-control {
+            height: auto;
+        }
+
+        textarea.form-control {
+            height: 248px;
+        }
+    }
+}
+
+@mixin button {
+    .btn-primary {
+        background-color: $brandYellow;
+        border-color: $brandYellow
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: $brandBlue;
+        background-color: white;
+        border-color: $brandYellow;
+    }
+}
+
+@mixin clear-text {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: $clearFontStack;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+.navbar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    background-color: transparent;
+
+    .navbar-brand {
+        @include logo;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: $brandYellow;
+        }
+
+        .active {
+            color: $brandYellow;
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: url(
+        "data:image/svg+xml;charset=utf8,
+            %3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath
+            stroke='rgba(254,209,54,1)'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-miterlimit='10'
+            d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"
+        );
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+}
+
+.navbar.prevent-def {
+    background-color: $brandBlue;
+}
+
+.main-header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        z-index: 1;
+    }
+}
+
+.page-section {
+    padding: 100px 0;
+
+    h2.section-heading {
+        @include section-heading;
+    }
+
+    h3.section-subheading {
+        @include section-subheading;
+    }
+
+    .service-heading {
+        margin: 15px 0;
+        text-transform: none;
+    }
+
+    .team-member img {
+        width: 225px;
+        height: 225px;
+        border: 7px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+
+    .team-member p {
+        margin-top: 0;
+    }
+}
+
+.form-section {
+    @include section-img-bg;
+
+    h2.section-heading {
+        color: white;
+    }
+
+    @include form;
+    @include button;
+}
+
+.filter-control {
+    position: relative;
+    height: 100%;
+
+    .filter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $brandBlue;
+        opacity: 0.9;
+    }
+}
+
+.footer {
+    padding: 25px 0;
+    text-align: center;
+
+    span.copyright {
+        @include clear-text;
+    }
+
+    ul.quicklinks {
+        @include clear-text;
+
+        a {
+            color: $brandBlue;
+        }
+    }
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+
+    li a {
+        font-size: 20px;
+        line-height: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        color: white;
+        border-radius: 100%;
+        outline: none;
+        background-color: $brandBlue;
+    }
+
+    li a:active, li a:focus, li a:hover {
+        background-color: $brandYellow;
+    }
+}
+
+.highlight {
+    color: $brandYellow;
+    font-family: $curlyFontStack;
+}
+
+.branded {
+    color: $brandYellow;
+}
+
+.shrink {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-color: $brandBlue !important;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../media/header-bg.jpg') no-repeat center center scroll;
+
+        video {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        background-color: $brandBlue;
+    }
+
+    .column-margin {
+        margin: 15px 0;
+    }
+
+    header {
+        background: url('../media/header-bg.jpg') no-repeat center center scroll;
+
+        video {
+            display: none;
+        }
+    }
+}
