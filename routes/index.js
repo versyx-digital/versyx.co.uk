@@ -2,15 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Versyx Digital.',
-    name: 'Versyx',
-    town: 'Rushden'
-  });
+  res.render('index', { title: 'Versyx Digital.' });
 });
 
 router.get('/privacy', (req, res) => {
-  res.render('privacy-policy', { title: 'Versyx Digital.' });
+  res.render('privacy-policy');
 });
 
 module.exports = router;
