@@ -71,7 +71,6 @@ gulp.task('vendor-scripts', () => {
         .pipe(gulp.dest(config.out + '/js'));
 });
 
-// TODO this will only work for individual scripts, refactor to work with concat
 gulp.task('versyx-scripts', () => {
     return gulp.src(config.versyx.scripts)
         .pipe(plugin.rename(config.versyx.js))

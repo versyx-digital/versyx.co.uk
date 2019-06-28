@@ -7,6 +7,7 @@
         "css": "bundle.min.css",
         "scripts": [
             "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/jquery-easing/dist/jquery.easing.1.3.umd.js",
             "node_modules/bootstrap/dist/js/bootstrap.min.js"
         ],
         "js": "bundle.min.js"

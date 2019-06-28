@@ -14,17 +14,11 @@ $(() => {
             if (target.length) {
                 $root.animate({
                     scrollTop: target.offset().top
-                }, scrollSpeed, () => {
+                }, scrollSpeed, "easeInOutExpo", () => {
                     window.location.hash = target[0]['id']
                 })
             }
         }
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $root.scrollspy({
-        target: '#mainNav',
-        offset: 56
     });
 
     // Collapse navbar
