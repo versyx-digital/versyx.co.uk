@@ -18,11 +18,6 @@ gulp.task('clean', () => {
     });
 });
 
-gulp.task('html', () => {
-    return gulp.src(['src/**/*.html'])
-        .pipe(gulp.dest(config.out))
-});
-
 gulp.task('videos', () => {
     return gulp.src(config.assets.media.videos)
         .pipe(gulp.dest(config.out + '/media'))
@@ -81,7 +76,6 @@ gulp.task('versyx-scripts', () => {
 });
 
 gulp.task('compile', gulp.parallel(
-    'html',
     'videos',
     'images',
     'fonts',

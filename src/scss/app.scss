@@ -100,6 +100,13 @@ body {
     position: relative;
 }
 
+a {
+    color: $brandYellow;
+}
+a:hover {
+    color: $brandBlue;
+}
+
 .navbar {
     padding-top: 25px;
     padding-bottom: 25px;
