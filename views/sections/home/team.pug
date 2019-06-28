@@ -2,35 +2,17 @@ section#team.bg-light.page-section.h-100
     .container
         .row
             .col-lg-12.text-center
-                h2.section-heading.text-uppercase The Team
+                +section-header('The Team')
         .row.text-center
             .col-sm-6
                 .team-member.column-margin
                     img.mx-auto.rounded-circle(src='media/team/1.jpg' alt='')
                     h4 Danielle Sharpe
                     p.text-muted Co-Founder & Designer
-                    ul.list-inline.social-buttons
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-twitter
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-facebook-f
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-linkedin-in
+                    +socialmedia
             .col-sm-6
                 .team-member.column-margin
                     img.mx-auto.rounded-circle(src='media/team/2.jpg' alt='')
                     h4 Christopher Rowles
                     p.text-muted Co-Founder & Developer
-                    ul.list-inline.social-buttons
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-twitter
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-facebook-f
-                        li.list-inline-item
-                            a(href='#')
-                                i.fab.fa-linkedin-in
+                    +socialmedia

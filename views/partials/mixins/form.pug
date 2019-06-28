@@ -1,0 +1,22 @@
+mixin form-input(name, type, required)
+    .form-group
+        input.form-control(
+            type=type
+            placeholder='Your ' + name + ' *'
+            required=required
+            data-validation-required-message='Please enter your ' + name + '.'
+        )
+        p.help-block.text-danger
+
+mixin form-textarea(name, required)
+    .form-group
+        textarea.form-control(
+            placeholder='Your ' + name + ' *'
+            required=required
+            data-validation-required-message='Please enter your ' + name + '.'
+        )
+        p.help-block.text-danger
+
+mixin form-button(text, action)
+    #success
+    button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type=action)= text
