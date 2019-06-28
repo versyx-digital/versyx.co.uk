@@ -29,12 +29,16 @@ $(() => {
 
     // Collapse navbar
     const navbarCollapse = () => {
-        let nav = $('#mainNav');
-        if (nav.offset().top > 100) {
-            nav.addClass("shrink");
-        } else {
-            nav.removeClass("shrink");
-        }
+        let nav = $('#mainNav'),
+            overlay = $('.full-overlay')[0];
+
+        (typeof overlay === 'undefined')
+            ? nav.addClass('prevent-def')
+            : nav.removeClass('prevent-def');
+
+        (nav.offset().top > 100)
+            ? nav.addClass('shrink')
+            : nav.removeClass('shrink');
     };
     // Collapse now if page is not at top
     navbarCollapse();
