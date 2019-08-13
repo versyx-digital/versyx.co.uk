@@ -1,0 +1,36 @@
+section#portfolio.bg-light.page-section
+    .container
+        .row
+            .col-lg-12.text-center
+                +section-header(
+                    "Portfolio",
+                    "Please find examples of our work below :)."
+                )
+        .row
+            .col-md-6.col-sm-6.portfolio-item
+                a.portfolio-link(data-toggle='modal' href='#portfolioModal1')
+                    .portfolio-hover
+                        .portfolio-hover-content
+                            i.fas.fa-plus.fa-3x
+                    img.img-fluid(src='media/1-snuggles.png' alt='')
+                .portfolio-caption
+                    h4 Snuggles Dog Grooming
+                    p.text-muted Responsive Website & CMS
+            //.col-md-4.col-sm-6.portfolio-item
+            //    a.portfolio-link(data-toggle='modal' href='#portfolioModal2')
+            //        .portfolio-hover
+            //            .portfolio-hover-content
+            //                i.fas.fa-plus.fa-3x
+            //        img.img-fluid(src='media/1-mop.png' alt='')
+            //    .portfolio-caption
+            //        h4 Month of Prizes
+            //        p.text-muted Promotional Campaign
+            .col-md-6.col-sm-6.portfolio-item
+                a.portfolio-link(data-toggle='modal' href='#portfolioModal3')
+                    .portfolio-hover
+                        .portfolio-hover-content
+                            i.fas.fa-plus.fa-3x
+                    img.img-fluid(src='media/1-rowles.png' alt='')
+                .portfolio-caption
+                    h4 Software Developer
+                    p.text-muted Personal Portfolio & Blogging Platform
