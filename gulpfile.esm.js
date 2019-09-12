@@ -1,8 +1,7 @@
 /**
  * Versyx Digital Ltd 2019
  *
- * gulpfile.babel.js (ES6)
- * @author Chris Rowles <me@rowles.ch>
+ * gulpfile.esm.js
  */
 import { src, dest, parallel, series } from 'gulp';
 import del from 'del';
