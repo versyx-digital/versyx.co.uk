@@ -7,6 +7,22 @@ html
         link(rel='stylesheet', href='/css/bundle.min.css')
         link(rel='stylesheet', href='/css/app.min.css')
         meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='description' content='We are a digital web agency based in Rushden. Please get in touch for a free quote on your project. We would love to help you.')
+        meta(name='author' content='Versyx Digital')
+        meta(property='og:title' content='Versyx Digital | A Web Agency from Rushden')
+        meta(property='og:description' content='We are a digital web agency based in Rushden. Please get in touch for a free quote on your project. We would love to help you.')
+        meta(property='og:url' content='https://www.versyx.co.uk')
+        meta(property='og:type' content='website')
+        meta(property='og:image' content='https://www.versyx.co.uk/media/vd.jpg')
+
+        // Global site tag (gtag.js) - Google Analytics
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-147973519-2')
+        script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-147973519-2');
+
     body(data-spy='scroll' data-target='.navbar' data-offset='56')
         include partials/nav
         main(role='main')
