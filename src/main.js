@@ -1,15 +1,18 @@
 import 'bootstrap';
 import './scss/app.scss';
 import {library, dom} from '@fortawesome/fontawesome-svg-core';
-import { faCircle, faLaptop, faServer, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faLaptop, faPlus, faServer, faShoppingCart, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faCircle, faLaptop, faServer, faShoppingCart);
+library.add(faCircle, faFacebookF, faLaptop, faPlus, faServer, faShoppingCart, faTimes, faTwitter );
 dom.watch();
 
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-} catch (e) {}
+} catch (e) {
+    console.log(e);
+}
 
 $(() => {
     "use strict";
