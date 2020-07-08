@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/bootstrap";
+@import "fonts";
+
 $curlyFontStack: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI",
 Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -28,9 +31,7 @@ $brandBlue: #212529;
 }
 
 @mixin section-img-bg {
-    background-image: url("../media/ma-image.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: #212529;
 }
 
 @mixin section-heading {
@@ -473,7 +474,7 @@ $background_color_3: #212529;
 
 @media (pointer: coarse) and (hover: none) {
     header {
-        background: url('../media/header-bg.jpg') no-repeat center center scroll;
+        background: #212529 no-repeat center center scroll;
 
         video {
             display: none;
@@ -491,7 +492,7 @@ $background_color_3: #212529;
     }
 
     header {
-        background: url('../media/header-bg.jpg') no-repeat center center scroll;
+        background: #212529 no-repeat center center scroll;
 
         video {
             display: none;
