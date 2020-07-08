@@ -24,7 +24,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.5.1",
-    "jquery-easing": "0.0.1",
+    "jquery.easing": "^1.4.1",
     "popper.js": "^1.16.1",
     "bootstrap": "^4.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
